@@ -1,4 +1,4 @@
-### Some important commands to manage argoCD
+### Some important commands to manage ArgoCD
 
 - Create namespace and install ArgoCD inside k8s cluster.
 ```bash
@@ -20,9 +20,9 @@ kubectl port-forward -n argocd svc/argocd-server 8000:443
 The initial password for the admin account is auto-generated and stored as clear text in the field password in a secret named argocd-initial-admin-secret in your Argo CD installation namespace. You can simply retrieve this password using kubectl:
 ```
 Default username: admin
+```
 
 - Get password
-```
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
