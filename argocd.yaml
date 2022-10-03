@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-application
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: git@github.com:rwiteshbera/argo-cd-app-config.git
+    targetRevision: HEAD
+    path: src
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp # if it doesn't exist, argocd will create
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true # If we manually run kubectl apply, it will sync git repository
+      prune: true

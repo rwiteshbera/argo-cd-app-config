@@ -4,16 +4,16 @@ metadata:
   name: nodejs-web-deployment
 spec:
   selector:
-    matchLabels: 
+    matchLabels:
       app: nodejs-web
   replicas: 3
   template:
-      metadata:
-        labels:
-          app: nodejs-web
-      spec:
-        containers:
+    metadata:
+      labels:
+        app: nodejs-web
+    spec:
+      containers:
         - name: nodejs-web
           image: rwiteshbera/simple-nodejs-app:1.0
         - ports:
-          - containerPort: 5000
+            - containerPort: 5000
