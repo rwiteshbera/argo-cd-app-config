@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: nodejs-web
-    spec:
+  spec:
       containers:
         - name: nodejs-web
           image: rwiteshbera/simple-nodejs-app:1.0
