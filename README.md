@@ -26,6 +26,7 @@ Default username: admin
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
+![image](https://user-images.githubusercontent.com/73098407/193611367-f3cbccb4-22be-42c0-88eb-46c8f3cf111d.png)
 
 Create a new app and connect your github repo for the configuration file, leave revision as HEAD. If you are using SSH, then make sure you are adding your private key in ```Settings->Repositories```
 
