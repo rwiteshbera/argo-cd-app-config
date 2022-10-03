@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-web
+  name: myapp
 spec:
   selector:
     matchLabels:
-      app: nodejs-web
+      app: myapp
   replicas: 3
   template:
     metadata:
       labels:
-        app: nodejs-web
+        app: myapp
   spec:
       containers:
-        - name: nodejs-web
+        - name: myapp
           image: rwiteshbera/simple-nodejs-app:1.0
         - ports:
             - containerPort: 5000
