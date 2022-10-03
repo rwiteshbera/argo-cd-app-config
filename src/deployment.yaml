@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: rwiteshbera/simple-nodejs-app:2.0
+        image: rwiteshbera/simple-nodejs-app:1.0
         ports:
         - containerPort: 5000
