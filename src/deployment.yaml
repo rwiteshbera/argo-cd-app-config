@@ -11,9 +11,9 @@ spec:
     metadata:
       labels:
         app: myapp
-  spec:
+    spec:
       containers:
-        - name: myapp
-          image: rwiteshbera/simple-nodejs-app:1.0
-        - ports:
+      - name: myapp
+        image: rwiteshbera/simple-nodejs-app:1.0
+        ports:
             - containerPort: 5000
