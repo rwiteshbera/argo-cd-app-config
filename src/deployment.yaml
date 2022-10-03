@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-web-deployment
+  name: nodejs-web
 spec:
   selector:
     matchLabels:

@@ -6,6 +6,6 @@ spec:
   selector:
     app: nodejs-web
   ports:
-  - port: 8000
+  - port: 5000
     protocol: TCP
-    targetPort: 8000
+    targetPort: 5000
