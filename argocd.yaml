@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/rwiteshbera/argo-cd-app-config.git
+    repoURL: git@github.com:rwiteshbera/argo-cd-app-config.git
     targetRevision: HEAD
     path: src
   destination:
